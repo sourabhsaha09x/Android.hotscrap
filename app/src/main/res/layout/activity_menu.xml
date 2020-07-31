@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:context=".Menu"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue"
+            android:id="@+id/toolbar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:elevation="4dp"
+            ></androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sell your scrap today!"
+            android:id="@+id/sellyourscraptoday_headings"
+            android:textSize="27dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select one or more items to proceed"
+            android:textSize="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/grey"
+
+            ></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="385dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/secondgrid_back"
+            >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="3"
+                android:rowCount="3" >
+
+                <ImageView
+                    android:id="@+id/newspaper"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:alpha="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="selectNewspaper"
+                    app:srcCompat="@drawable/ic_newspaper" />
+
+                <ImageView
+                    android:id="@+id/selectnewspaper"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:alpha="0"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="selectNewspaper"
+                    app:srcCompat="@drawable/select_newspaper" />
+
+                <ImageView
+                    android:id="@+id/cardboard"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:alpha="1"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="selectCardboard"
+                    app:srcCompat="@drawable/ic_cardboard" />
+
+                <ImageView
+                    android:id="@+id/selectcardboard"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:alpha="0"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="selectCardboard"
+                    app:srcCompat="@drawable/select_cardboard" />
+
+                <ImageView
+                    android:id="@+id/plasticbottles"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginTop="15dp"
+                    android:alpha="1"
+                    android:onClick="selectPlasticBottles"
+                    app:srcCompat="@drawable/ic_plastic_bottles" />
+
+                <ImageView
+                    android:id="@+id/selectplasticbottles"
+                    android:layout_width="125dp"
+                    android:layout_height="85dp"
+                    android:alpha="0"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    android:onClick="selectPlasticBottles"
+                    app:srcCompat="@drawable/select_plasticbottles" />
+
+
+                <ImageView
+                    android:id="@+id/metalcans"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:alpha="1"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="18dp"
+                    android:onClick="selectMetalcans"
+                    app:srcCompat="@drawable/ic_metal_cans" />
+
+                <ImageView
+                    android:id="@+id/selectedmetalcans"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:alpha="0"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="18dp"
+                    android:onClick="selectMetalcans"
+                    app:srcCompat="@drawable/select_metal" />
+
+
+                <ImageView
+                    android:id="@+id/books"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:alpha="1"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/ic_book" />
+
+                <ImageView
+                    android:id="@+id/selectbooks"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="15dp"
+                    android:alpha="0"
+                    android:onClick="selectbooks"
+                    app:srcCompat="@drawable/select_book" />
+
+
+                <ImageView
+                    android:id="@+id/battery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:alpha="1"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:onClick="selectBattery"
+                    app:srcCompat="@drawable/ic_battery" />
+
+                <ImageView
+                    android:id="@+id/selectbattery"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:alpha="0"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:onClick="selectBattery"
+                    app:srcCompat="@drawable/select_battery" />
+
+                <ImageView
+                    android:id="@+id/ewaste"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:alpha="1"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="15dp"
+                    android:onClick="selecteWaste"
+                    app:srcCompat="@drawable/ic_ewaste" />
+
+                <ImageView
+                    android:id="@+id/selectewaste"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:alpha="0"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="15dp"
+                    android:onClick="selecteWaste"
+                    app:srcCompat="@drawable/select_ewaste" />
+
+                <ImageView
+                android:id="@+id/glassbottles"
+                android:layout_width="110dp"
+                android:layout_height="100dp"
+                    android:alpha="1"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="19dp"
+                android:onClick="selectGlassbottles"
+                app:srcCompat="@drawable/ic_glass_bottles" />
+
+                <ImageView
+                    android:id="@+id/selectglassbottles"
+                    android:layout_width="110dp"
+                    android:layout_height="100dp"
+                    android:alpha="0"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="19dp"
+                    android:onClick="selectGlassbottles"
+                    app:srcCompat="@drawable/select_glassbottles" />
+
+
+                <ImageView
+                    android:id="@+id/other"
+                    android:layout_width="110dp"
+                    android:layout_height="100dp"
+                    android:alpha="1"
+                    android:layout_row="2"
+                    android:layout_column="2"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="0dp"
+                    android:onClick="selectFurniture"
+                    app:srcCompat="@drawable/ic_furniture" />
+
+                <ImageView
+                    android:id="@+id/selectother"
+                    android:layout_width="110dp"
+                    android:layout_height="100dp"
+                    android:alpha="0"
+                    android:layout_row="2"
+                    android:layout_column="2"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="0dp"
+                    android:onClick="selectFurniture"
+                    app:srcCompat="@drawable/select_furniture" />
+
+
+            </GridLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/btn_menupage_next"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_button"
+                    android:layout_centerHorizontal="true"
+                    android:text="SELL"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    ></Button>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"
+        />
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

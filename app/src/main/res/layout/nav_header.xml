@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/pale_yellow"
+    android:padding="20dp"
+    >
+
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/main_image"
+        android:id="@+id/main_image"
+        android:paddingTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        ></ImageView>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/viewSupporter"
+        app:layout_constraintBottom_toBottomOf="@id/main_image"
+        app:layout_constraintEnd_toEndOf="@id/main_image"
+        app:layout_constraintStart_toStartOf="@id/main_image"
+        app:layout_constraintTop_toTopOf="@id/main_image"
+        ></View>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Hi, \nSourabh"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/main_image"
+        app:layout_constraintStart_toEndOf="@id/main_image"
+        ></TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".SchedulePickUp">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="130dp"
+                android:src="@drawable/schedule_page_image"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                ></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule your pickup"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="170dp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="When do you want your scrap to be picked up"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="200dp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferred date for your pickup?"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="250dp"
+                android:layout_marginLeft="20dp"
+                ></TextView>
+
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="290dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/colorWhite"
+                >
+
+                <Button
+                    android:id="@+id/btn_today"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="Today"
+                    android:textSize="13dp"
+                    android:onClick="onOutLinedButtonClicked"
+                    android:background="@drawable/left_button"
+                    ></Button>
+
+                <Button
+                    android:id="@+id/btn_tomorrow"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="Tomorrow"
+                    android:textSize="13dp"
+                    android:onClick="onOutLinedButtonClicked"
+                    android:background="@drawable/middle_button"
+                    ></Button>
+
+                <Button
+                    android:id="@+id/otherday"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="Other day"
+                    android:textSize="13dp"
+                    android:onClick="onOutLinedButtonClicked"
+                    android:background="@drawable/right_button"
+                    ></Button>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="25dp"
+                android:layout_marginTop="400dp"
+                android:layout_marginLeft="100dp"
+                ></TextView>
+
+            <CalendarView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="430dp"></CalendarView>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeat the pickup request"
+                android:layout_marginTop="520dp"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:outlineSpotShadowColor="@color/colorYellow"
+                ></CheckBox>
+
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="560dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/colorWhite"
+                >
+
+                <Button
+                    android:id="@+id/thirtydays"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="30 days"
+                    android:textSize="13dp"
+                    android:onClick="onOutLinedButtonClicked"
+                    android:background="@drawable/left_button"
+                    ></Button>
+
+                <Button
+                    android:id="@+id/forty5days"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="45 days"
+                    android:textSize="13dp"
+                    android:onClick="onOutLinedButtonClicked"
+                    android:background="@drawable/middle_button"
+                    ></Button>
+
+                <Button
+                    android:id="@+id/sixtydays"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="60 days"
+                    android:textSize="13dp"
+                    android:onClick="onOutLinedButtonClicked"
+                    android:background="@drawable/right_button"
+                    ></Button>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/blue_button"
+                android:text="CONFIRM"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                android:layout_marginTop="650dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                ></Button>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
